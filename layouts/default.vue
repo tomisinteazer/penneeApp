@@ -88,8 +88,7 @@ export default {
     };
   },
   mounted() {
-    setTimeout(this.$myIntercom(), 1000);
-    this.sidebar = false;
+    setTimeout(this.$myIntercom(), 2000);
   },
 };
 </script>
