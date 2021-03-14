@@ -34,7 +34,8 @@ export default {
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     // https://go.nuxtjs.dev/vuetify
-    "@nuxtjs/vuetify"
+    "@nuxtjs/vuetify",
+    "@nuxtjs/dotenv"
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -46,6 +47,13 @@ export default {
     theme: {
       dark: false,
       themes: {
+        light: {
+          primary: "#A55BFF",
+          secondary: "#b0bec5",
+          accent: "#8c9eff",
+          error: "#b71c1c"
+        },
+
         dark: {
           primary: colors.blue.darken2,
           accent: colors.grey.darken3,

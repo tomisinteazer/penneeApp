@@ -1,7 +1,7 @@
 export default (context, inject) => {
-  let myIntercom = () => {
+  let myIntercom = appId => {
     //Set your APP_ID
-    var APP_ID = "aa3avos3";
+    var APP_ID = appId;
 
     window.intercomSettings = {
       app_id: APP_ID
