@@ -8,9 +8,7 @@
           </p>
           <p class="text-center text-md-left">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum
-            dignissimos minus minima illum eveniet natus beatae iure aperiam
-            deserunt ex excepturi exercitationem, nobis quidem incidunt vitae
-            reiciendis ea commodi adipisci.<br />
+            dignissimos minus minima illum<br />
             <v-btn
               class="primary text-center text-md-left"
               large
@@ -31,7 +29,7 @@
     <section>
       <v-row justify="center" align="center">
         <v-col cols="12" sm="12" md="12">
-          <p class="text-h3 text-sm-center">
+          <p class="text-h4 font-weight-bold text-center">
             growth partner for small businesses
           </p>
         </v-col>
@@ -114,10 +112,32 @@
       </v-row>
     </section>
     <section>
+      <v-row justify="center" align="center">
+        <v-col cols="12" sm="12" md="6">
+          <v-img
+            src="https://picsum.photos/350/165?random"
+            contain
+            class="grey darken-4"
+          ></v-img
+        ></v-col>
+        <v-col cols="12" sm="12" md="6">
+          <p class="text-h4 text-sm-center">
+            growth partner for small businesses
+          </p>
+          <p class="subtitle-2">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum
+            dignissimos minus minima illum eveniet natus beatae iure aperiam
+            deserunt ex excepturi exercitationem, nobis quidem incidunt vitae
+            reiciendis ea commodi adipisci.
+          </p>
+        </v-col>
+      </v-row>
+    </section>
+    <section>
       <v-row>
-        <v-col cols="6" sm="12" md="6" v-for="k in 4" :key="k">
+        <v-col cols="12" sm="12" md="6" v-for="k in 4" :key="k">
           <div>
-            <v-card class="mx-auto" max-width="344">
+            <v-card class="primaryflat">
               <v-img
                 src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg"
                 height="200px"
@@ -158,6 +178,62 @@
         </v-col>
       </v-row>
     </section>
+    <section>
+      <v-row justify="center" align="center">
+        <v-col cols="12" sm="12" md="12">
+          <p class="text-h4 font-weight-bold text-center">
+            growth partner for small businesses
+          </p>
+        </v-col>
+        <v-col cols="12" sm="12" md="12">
+          <v-expansion-panels flat>
+            <v-expansion-panel
+              v-for="(item, i) in 5"
+              :key="i"
+              class="background"
+            >
+              <v-expansion-panel-header>
+                question and answer
+              </v-expansion-panel-header>
+              <v-expansion-panel-content>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat.
+              </v-expansion-panel-content>
+            </v-expansion-panel>
+          </v-expansion-panels>
+        </v-col>
+      </v-row>
+    </section>
+    <section class="text-center">
+      <v-card flat color="primaryflat py-8">
+        <v-container class="">
+          <v-row justify="center" align="center">
+            <v-col cols="8" class="py-6">
+              <v-img width="150px" contain src="/pennee.png"></v-img
+            ></v-col>
+          </v-row>
+
+          <v-form>
+            <div
+              class="d-flex flex-column flex-md-row justify-center align-top"
+            >
+              <v-text-field
+                solo
+                v-model="email"
+                class=""
+                placeholder="Enter Your Mail"
+                :rules="emailRules"
+              ></v-text-field>
+              <v-btn large color="primary" @click="mailernwletter"
+                >get early access</v-btn
+              >
+            </div>
+          </v-form>
+        </v-container>
+      </v-card>
+    </section>
   </div>
 </template>
 
@@ -195,5 +271,8 @@ export default {
 section {
   margin-top: 2em;
   margin-bottom: 10em;
+}
+.background {
+  border-bottom: solid black 6px !important;
 }
 </style>
